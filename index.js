@@ -106,7 +106,7 @@ var formatMetric = function (data) {
 
     for (var i = 0; i < metricsCount; i++) {
         metricTime = startTime.add(1, 'minutes');
-        metricItem.date = metricTime.unix();
+        metricItem.date = metricTime.clone().toDate();
         metricItem.heartRate = metrics.heartrate.values[i];
         metricItem.steps = metrics.steps.values[i];
         metricItem.calories = metrics.calories.values[i];
